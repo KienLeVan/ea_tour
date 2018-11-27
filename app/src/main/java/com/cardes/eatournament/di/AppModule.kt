@@ -2,6 +2,8 @@ package com.cardes.eatournament.di
 
 import com.cardes.eatournament.SchedulerProvider
 import com.cardes.eatournament.SchedulerProviderImpl
+import com.cardes.eatournament.repository.PlayerRepository
+import com.cardes.eatournament.repository.PlayerRepositoryImpl
 import com.cardes.eatournament.repository.TeamRepository
 import com.cardes.eatournament.repository.TeamRepositoryImpl
 import dagger.Binds
@@ -14,4 +16,7 @@ interface AppModule {
 
     @Binds
     fun teamRepository(teamRepository: TeamRepositoryImpl) : TeamRepository
+
+    @Binds
+    fun playerRepository(playerRepository: PlayerRepositoryImpl) : PlayerRepository
 }

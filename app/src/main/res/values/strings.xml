@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EATournament</string>
+    <string name="ea_teams">EATournament - Teams</string>
+    <string name="ea_players">EATournament - Players</string>
 </resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="@dimen/player_item_view_height"
+                                             android:clipToPadding="false"
+                                             android:padding="@dimen/player_item_view_padding"
+                                             xmlns:tools="http://schemas.android.com/tools">
+    <android.support.design.card.MaterialCardView
+            android:elevation="@dimen/player_item_card_elevation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:fontFamily="@font/quick_sand_medium"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/player_item_text_size"
+                android:gravity="center"
+                tools:text="Ha"
+                android:id="@+id/playerName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </android.support.design.card.MaterialCardView>
+
+</android.support.constraint.ConstraintLayout>

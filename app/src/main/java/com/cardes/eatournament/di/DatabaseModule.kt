@@ -2,6 +2,7 @@ package com.cardes.eatournament.di
 
 import android.app.Application
 import com.cardes.eatournament.db.TournamentDatabase
+import com.cardes.eatournament.db.dao.PlayerDao
 import com.cardes.eatournament.db.dao.TeamDao
 import com.cardes.eatournament.gateway.TournamentDatabaseGateway
 import com.cardes.eatournament.gateway.TournamentDatabaseGatewayImpl
@@ -16,11 +17,17 @@ abstract class DatabaseModule {
     companion object {
         @JvmStatic
         @Provides
-        fun tournamentDatabase(application: Application) : TournamentDatabase = TournamentDatabase.getTournamentDatabase(application)
+        fun tournamentDatabase(application: Application) : TournamentDatabase
+                = TournamentDatabase.getTournamentDatabase(application)
 
         @JvmStatic
         @Provides
         fun teamDao(tournamentDatabase: TournamentDatabase) : TeamDao = tournamentDatabase.teamDao()
+
+        @JvmStatic
+        @Provides
+        fun playerDao(tournamentDatabase: TournamentDatabase) : PlayerDao = tournamentDatabase.playerDao()
+
     }
 
     @Binds

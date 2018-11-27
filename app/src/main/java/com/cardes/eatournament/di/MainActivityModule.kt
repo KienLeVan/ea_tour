@@ -1,11 +1,14 @@
 package com.cardes.eatournament.di
 
 import android.arch.lifecycle.ViewModel
+import com.cardes.eatournament.MainActivity
 import com.cardes.eatournament.usecase.GetTeamsUseCase
 import com.cardes.eatournament.usecase.GetTeamsUseCaseImpl
 import com.cardes.eatournament.viewmodel.MainActivityViewModel
 import dagger.Binds
 import dagger.Module
+import dagger.android.AndroidInjector
+import dagger.multibindings.ClassKey
 import dagger.multibindings.IntoMap
 
 @Module

@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey
 data class Team(
 
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Long,
     val name: String) {
     companion object {
         fun seeds(): List<Team> = listOf(
