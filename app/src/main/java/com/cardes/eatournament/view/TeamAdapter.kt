@@ -1,6 +1,6 @@
 package com.cardes.eatournament.view
 
-import android.support.design.card.MaterialCardView
+import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -31,7 +31,7 @@ class TeamAdapter(private val teamClickListener: TeamClickListener) : RecyclerVi
 
     inner class TeamViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val teamName = itemView.findViewById<TextView>(R.id.teamName)!!
-        private val teamCard = itemView.findViewById<MaterialCardView>(R.id.teamCard)!!
+        private val teamCard = itemView.findViewById<CardView>(R.id.teamCard)!!
 
         fun bind(team: Team) {
             teamName.text = team.name

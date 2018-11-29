@@ -3,6 +3,8 @@ package com.cardes.eatournament.di
 import android.arch.lifecycle.ViewModel
 import com.cardes.eatournament.usecase.GetPlayersFromTeamUseCase
 import com.cardes.eatournament.usecase.GetPlayersFromTeamUseCaseImpl
+import com.cardes.eatournament.usecase.GetTeamUseCase
+import com.cardes.eatournament.usecase.GetTeamUseCaseImpl
 import com.cardes.eatournament.viewmodel.TeamPlayerListViewModel
 import dagger.Binds
 import dagger.Module
@@ -20,5 +22,9 @@ interface TeamPlayerListActivityModule {
     @Binds
     @ActivityScope
     fun getPlayersFromTeamUseCase(getPlayersFromTeamUseCase: GetPlayersFromTeamUseCaseImpl): GetPlayersFromTeamUseCase
+
+    @Binds
+    @ActivityScope
+    fun getTeamUseCase(getTeamUseCase: GetTeamUseCaseImpl): GetTeamUseCase
 
 }

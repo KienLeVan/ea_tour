@@ -39,13 +39,20 @@ class TeamPlayerListActivity : TeamScopeBaseActivity() {
     private fun initViews() {
         playerList.adapter = playerAdapter
         playerList.layoutManager = LinearLayoutManager(this)
-        title = getString(R.string.ea_players)
     }
 
     private fun bind() {
         viewModel.getPlayersFromTeam()
             .subscribe({
                 playerAdapter.setPlayers(it)
+            }, {
+                Log.e("TeamPlayerListActivity", it.toString())
+            })
+            .let { disposables.add(it) }
+
+        viewModel.getTeam()
+            .subscribe({
+                title = getString(R.string.team_player_list_title, it.name)
             }, {
                 Log.e("TeamPlayerListActivity", it.toString())
             })
